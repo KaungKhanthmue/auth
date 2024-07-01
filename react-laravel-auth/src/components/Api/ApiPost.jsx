@@ -7,7 +7,13 @@ const useApiPost = (url) => {
 
   const fetchData = async (form) => {
     try {
-      const response = await axios.post(url, form);
+      const token = localStorage.getItem('ACCESS_TOKEN');
+      const response = await axios.post(url, form,{
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        }
+    });
       setDataForm(response.data); 
     } catch (error) {
       setError(error.response ? error.response.data : "An error occurred");

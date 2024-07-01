@@ -28,16 +28,16 @@ export default function Login() {
   useEffect(() => {
     if (dataform) {
       if (dataform.data.token && dataform.data.user) {
-        setToken(dataform.data.token);    
+        setToken(dataform.data.token);   
         navigate('/dashboard');   
       }
     }
   }, [dataform, setToken, navigate]);
   return (
     <>
-    <div className="bg-gray-100 flex flex-col justify-center sm:py-12">
+    <div className="bg-gray-100 flex flex-col justify-center sm:py-12 h-screen">
       <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
-        <h1 className="font-bold text-center text-2xl mb-5">Register</h1>
+        <h1 className="font-bold text-center text-2xl mb-5">Login</h1>
         <div className="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
           <div className="px-5 py-7">
             <form onSubmit={submit}>

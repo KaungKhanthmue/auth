@@ -6,7 +6,7 @@ export default function Auth() {
         <div >
             <Nav/>
         </div>
-        <div className="">
+        <div className="bg-red-950 h-screen">
             <Outlet/>
         </div>
     </>

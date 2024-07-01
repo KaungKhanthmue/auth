@@ -15,7 +15,7 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-    
+        
         if (Auth::attempt($request->only('email', 'password'))) {
         
             $user = Auth::user();

@@ -7,7 +7,7 @@ export default function Nav() {
   console.log(user, token);
 
   return (
-    <div className="w-full h-[50px] bg-gray-400">
+    <div className="w-full h-[50px] bg-gray-400 z-40 absolute">
       <div className="flex items-center justify-between p-2">
         <h1 className="text-2xl font-bold">My App</h1>
         <div className="flex gap-4">

@@ -29,7 +29,7 @@ export default function Login() {
     if (dataform) {
       if (dataform.data.token && dataform.data.user) {
         setToken(dataform.data.token);   
-        navigate('/dashboard');   
+        navigate('/xx/dashboard');   
       }
     }
   }, [dataform, setToken, navigate]);
@@ -47,7 +47,7 @@ export default function Login() {
               <label className="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
               <input type="password" ref={passwordRef} className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" required />
               <button type="submit" className="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block" disabled={loading}>
-                <span className="inline-block mr-2">{loading ? "Registering..." : "Register"}</span>
+                <span className="inline-block mr-2">{loading ? "Login ..." : "Login"}</span>
                 {!loading && (
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 inline-block">
                     <path d="M17 8l4 4m0 0l-4 4m4-4H3" />

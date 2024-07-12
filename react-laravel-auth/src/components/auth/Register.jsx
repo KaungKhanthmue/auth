@@ -31,7 +31,7 @@ export default function Register() {
     if (dataform) {
       if (dataform.data.token && dataform.data.user) {
         setToken(dataform.data.token);  
-        navigate('/dashboard');   
+        navigate('/xx/dashboard');   
       }
     }
   }, [dataform, setToken, navigate]);

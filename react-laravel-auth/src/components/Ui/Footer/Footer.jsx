@@ -1,17 +1,30 @@
-// src/components/Ui/Footer/Footer.jsx;
+
+import IconCloud from '../../Magic /IconCloud'; 
 
 const Footer = () => {
+  const iconSlugs = [
+    "javascript",
+    "php",
+    "react",
+    "html5",
+    "css3",
+    "filament",
+    "laravel",
+    "bootstrap",
+    "tailwindcss",
+    "mysql",
+    "postgresql",
+    "docker",
+    "git",
+    "github",
+    "visualstudiocode",
+    "figma",
+    "vuejs", // Correct slug for Vue.js
+  ];
+
   return (
     <footer>
-        <div className="flex">
-          <div className="w-[40%] h-[500px]">
-          </div>
-              <div className="w-[20%]">
-                
-              </div>
-          <div className="w-[40%] h-[500px]"></div>
-        </div>
-
+      <IconCloud iconSlugs={iconSlugs} />
     </footer>
   );
 };

@@ -6,6 +6,7 @@ import Nav from './Nav';
 export default function XX() {
   const { token } = useContext(AuthContext);
   const [sidebar, setSidebar] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
 
   if (!token) {
     return <Navigate to="/auth/login" />;
@@ -14,17 +15,30 @@ export default function XX() {
   const toggleSidebar = () => {
     setSidebar(!sidebar);
   };
+  const clicksidebtn = (item) => {
+    setActiveItem(item);
+  };
 
   return (
     <div className="w-full">
       <div onClick={toggleSidebar}>
         <Nav />
       </div>
-      <div className="bg-black flex w-full">
-        <div className={`h-screen bg-gray-300 px-2 transition-all duration-300 ${sidebar ? 'w-0' : 'w-[20%]'}`}>
+      <div className="bg-black flex w-full h-screen">
+        <div className={`h-screen bg-gray-700  transition-all duration-300 ${sidebar ? 'hidden' : 'w-[20%]'}`}>
             <div className="  h-screen pt-9 ">
-                <div className="w-full h-[50px]  bg-opacity-80 mt-10 rounded-xl pl-2 text-gray-700  text-xl py-3">@ Dashboard</div>
-                <div className="w-full h-[50px] bg-gray-50 bg-opacity-80 mt-3 rounded-xl pl-2  text-gray-700  text-xl py-3">@ Language</div>
+            <div
+              onClick={() => clicksidebtn('dashboard')}
+              className={`w-full h-[50px] mt-10 rounded-md pl-2 text-black font-medium text-xl py-3 cursor-pointer ${activeItem === 'dashboard' ? 'bg-blue-200' : 'bg-opacity-60'}`}
+            >
+              @ Dashboard
+            </div>
+            <div
+              onClick={() => clicksidebtn('language')}
+              className={`w-full h-[50px]  mt-3 rounded-md pl-2 text-black font-medium text-xl py-3 cursor-pointer ${activeItem === 'language' ? 'bg-blue-200  ' : 'bg-opacity-60'}`}
+            >
+              @ Language
+            </div>
             </div>
         </div>
         <div className='w-full'>

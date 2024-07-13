@@ -1,11 +1,19 @@
+// src/components/Ui/Footer/Footer.jsx;
 
-
-function Footer() {
+const Footer = () => {
   return (
-    <>
-        <div className="w-full h-[100px] bg-black"></div>
-    </>
-  )
-}
+    <footer>
+        <div className="flex">
+          <div className="w-[40%] h-[500px]">
+          </div>
+              <div className="w-[20%]">
+                
+              </div>
+          <div className="w-[40%] h-[500px]"></div>
+        </div>
 
-export default Footer
+    </footer>
+  );
+};
+
+export default Footer;

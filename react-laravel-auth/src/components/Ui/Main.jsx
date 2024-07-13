@@ -5,7 +5,7 @@ import Footer from './Footer/Footer.jsx';
 export default function Main() {
   return (
     <>
-        <Header />
+        {/* <Header /> */}
         <Body /> 
         <Footer />
     </>
